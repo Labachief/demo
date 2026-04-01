@@ -1,20 +1,17 @@
 package com.myinnovate.demo.entity;
 
-import java.util.Date;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
-public class B2bOrderDetail {
+@Table
+@ToString(callSuper = true)
+public class B2bOrderDetail extends OrderDetail {
 
-    @Id
-    private int orderNumber;
-    private String shippingMothod;
     private Boolean container;
-    private Date createdDate;
-    private Date updatedDate;
     
     public B2bOrderDetail() {
     }

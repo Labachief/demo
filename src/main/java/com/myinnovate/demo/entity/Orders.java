@@ -17,6 +17,7 @@ public class Orders {
     private int number;
     private String typeOfBusiness;
     private String typeOfOrder;
+    private Boolean invalid;;
     private Date createdDate;
     private Date updatedDate;
 

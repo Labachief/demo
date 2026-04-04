@@ -12,7 +12,7 @@ import lombok.ToString;
 public class B2cOrderDetail extends OrderDetail {
     
     private String category;
-    private String twoWay;
+    private Boolean twoWay;
 
     public B2cOrderDetail() {
     }   

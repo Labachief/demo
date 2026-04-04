@@ -8,7 +8,7 @@ public interface OrdersRepo extends JpaRepository<Orders, Integer> {
 
     public Orders findByNumber(int number);
 
-    public List<Orders> findByInvalid(Boolean invalid);
+    public List<Orders> findByInvalidOrderByNumber(Boolean invalid);
 
     public void deleteByNumber(int number);
 }

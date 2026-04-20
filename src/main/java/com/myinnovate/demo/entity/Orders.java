@@ -2,14 +2,13 @@ package com.myinnovate.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import java.util.Date;
+
+import java.time.LocalDateTime;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.Data;
 
@@ -22,8 +21,9 @@ public class Orders {
     private String typeOfBusiness;
     private String typeOfOrder;
     private Boolean invalid;;
-    private Date createdDate;
-    private Date updatedDate;
+    private String status;
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
 
     @OneToOne(targetEntity = OrderDetail.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @PrimaryKeyJoinColumn

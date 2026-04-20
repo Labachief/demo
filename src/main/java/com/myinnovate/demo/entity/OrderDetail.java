@@ -1,5 +1,6 @@
 package com.myinnovate.demo.entity;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -15,6 +16,8 @@ public abstract class OrderDetail {
     @Id
     protected int orderNumber;
     private String item;
+    private int quantity;
+    private String unit;
     private String descriptionOfGoods;
     private String shipper;
     private String por;
@@ -24,10 +27,10 @@ public abstract class OrderDetail {
     private String pod;
     private String consigneePhone;
     private String consigneeEmail;
-    private String trackingNumber;
     private String shippingMethod;
+    private Integer trackingNumber;
     private Date eta;
     private String note;
-    private Date createdDate;
-    private Date updatedDate;
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
 }

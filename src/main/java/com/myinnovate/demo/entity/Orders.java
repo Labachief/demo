@@ -24,6 +24,7 @@ public class Orders {
     private String status;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
+    private String attachment;
 
     @OneToOne(targetEntity = OrderDetail.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @PrimaryKeyJoinColumn
